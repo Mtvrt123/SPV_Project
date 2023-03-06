@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SPV_Project.Models
+namespace SPV_Project
 {
     public class Database
     {
