@@ -13,19 +13,34 @@
             </Border.Background>
         </Border>
         <StackLayout>
-            <Label Text="BeeFit" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" />
+            <Label Text="BeeFit" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" TextColor="Black"/>
             <Image Source="logo.png" HeightRequest="200" HorizontalOptions="Center" Margin="50,0,0,0"/>
-            <Label Text="Prijava" FontSize="Large" HorizontalOptions="Center"/>
+            <Label Text="Prijava" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
             <Label Text="Uporabniško ime:"  Margin="20,10" />
-            <Entry Placeholder="Uporabniško ime" Keyboard="Text"  Margin="20,10"/>
+            <Border Stroke="black" StrokeThickness="1" Margin="5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Entry Placeholder="Uporabniško ime" Keyboard="Text"  Margin="20,10"/>
+            </Border>
             <Label Text="Geslo:"  Margin="20,10" />
-            <Entry Placeholder="Geslo" IsPassword="True" Margin="20,10"/>
+            <Border Stroke="black" StrokeThickness="1" Margin="5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Entry Placeholder="Geslo" IsPassword="True" Margin="20,10"/>
+            </Border>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
-                <Label Text="Nimate računa?" Margin="0,0,5,0" />
-                <Button Text="Registracija" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Blue" Margin="0,0,5,0" Clicked="Button_Clicked" IsEnabled="True"/>
+                <Label Text="Nimate računa?" TextColor="Black" VerticalOptions="Center"/>
+                <Button Text="Registracija" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Blue" Clicked="Button_Clicked" IsEnabled="True" VerticalOptions="Center"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
-                <Button Text="Prijava" BackgroundColor="#D5F889" TextColor="Black" Margin="0,0,5,0" WidthRequest="150"/>
+                <Border Stroke="black" StrokeThickness="1" Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Button Text="Prijava" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+                </Border>
             </StackLayout>
         </StackLayout>
     </Grid>

@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SPV_Project.Registration"
-             Title="Registration">
+             Title="Registration" BackgroundColor="#D5F889">
 	<StackLayout>
-		<Label Text="Registration Form" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" />
+		<Label Text="Registracija" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" />
 		<Entry Placeholder="First Name" Keyboard="Text" Margin="20,10" />
 		<Entry Placeholder="Last Name" Keyboard="Text" Margin="20,10" />
 		<Entry Placeholder="Username" Keyboard="Text" Margin="20,10" />
