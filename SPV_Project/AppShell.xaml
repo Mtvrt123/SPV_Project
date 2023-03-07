@@ -6,9 +6,37 @@
     xmlns:local="clr-namespace:SPV_Project"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Profile">
+            <ShellContent
+                Title="Profile"
+                ContentTemplate="{DataTemplate local:Profile}"
+                Route="Profile" />
+        </Tab>
+        <Tab Title="Exercises History">
+            <ShellContent
+                Title="Exercises History"
+                ContentTemplate="{DataTemplate local:ExercisesHistory}"
+                Route="ExercisesHistory" />
+        </Tab>
+        <Tab Title="Scanner">
+            <ShellContent
+                Title="Scanner"
+                ContentTemplate="{DataTemplate local:Scanner}"
+                Route="Scanner" />
+        </Tab>
+        <Tab Title="My Exercise">
+            <ShellContent
+                Title="My Exercise"
+                ContentTemplate="{DataTemplate local:MyExercise}"
+                Route="MyExercise" />
+        </Tab>
+        <Tab Title="All Exercises">
+            <ShellContent
+                Title="All Exercises"
+                ContentTemplate="{DataTemplate local:AllExercises}"
+                Route="AllExercises" />
+        </Tab>
+    </TabBar>
 
 </Shell>

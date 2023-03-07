@@ -49,19 +49,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Exercises.xaml">
+	  <MauiXaml Update="AllExercises.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ExercisesInfo.xaml">
+	  <MauiXaml Update="ExercisesHistory.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MyWorkout.xaml">
+	  <MauiXaml Update="MyExercise.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MyWorkoutInfo.xaml">
+	  <MauiXaml Update="MyExerciseInfo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Profile.xaml">
