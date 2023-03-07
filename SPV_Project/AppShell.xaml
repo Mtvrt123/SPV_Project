@@ -11,8 +11,7 @@
             <ShellContent
                 Title="Profile"
                 ContentTemplate="{DataTemplate local:Profile}"
-                Route="Profile" 
-                />
+                Route="Profile"/>
         </Tab>
         <Tab Title="" Icon="history.png">
             <ShellContent
