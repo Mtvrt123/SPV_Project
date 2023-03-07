@@ -13,13 +13,14 @@
     
         <VerticalStackLayout Grid.Column="0" Margin="15,0,15,0">
             <Label Text="Ime:"/>
-            <Entry Text="{Binding Ime}" IsReadOnly="True"/>
+            <Entry x:Name="Ime" Text="{Binding Uporabnik.Ime}" IsReadOnly="False"/>
             <Label Text="Priimek:"/>
-            <Entry Text="{Binding Priimek}" IsReadOnly="True"/>
+            <Entry x:Name="Priimek" Text="{Binding Uporabnik.Priimek}" IsReadOnly="False"/>
             <Label Text="Uporabniško ime:"/>
-            <Entry Text="{Binding UporabniskoIme}" IsReadOnly="True"/>
+            <Entry x:Name="UporabniskoIme" Text="{Binding Uporabnik.UporabniskoIme}" IsReadOnly="False"/>
             <Label Text="Email:"/>
-            <Entry Text="{Binding Email}" IsReadOnly="True"/>
+            <Entry x:Name="Email" Text="{Binding Uporabnik.Email}" IsReadOnly="False"/>
+            <Button Text="Edit" Clicked="Edit_Clicked" Margin="0,15,0,0"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

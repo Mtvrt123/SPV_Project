@@ -1,4 +1,7 @@
-﻿namespace SPV_Project;
+﻿using Microsoft.Extensions.DependencyInjection;
+using SPV_Project.ViewModel;
+
+namespace SPV_Project;
 
 public static class MauiProgram
 {
@@ -13,6 +16,10 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
+		builder.Services.AddSingleton<Profile>();
+		builder.Services.AddSingleton<ProfileViewModel>();
+
+
+        return builder.Build();
 	}
 }

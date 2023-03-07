@@ -10,25 +10,24 @@ namespace SPV_Project.ViewModel
 {
     public class ProfileViewModel : ObservableObject
     {
-        public string Ime { get; private set; }
-        public string Priimek { get; private set; }
-        public string UporabniskoIme { get; private set; }
-        public string Email { get; private set; }
+        public Uporabnik Uporabnik { get; private set; }
 
         public ProfileViewModel()
         {
-            GetData();
+            this.Uporabnik = App.Database.GetUser();
         }
 
-        private void GetData()
+        public void UpdateData(string ime, string priimek, string uporabniskoIme, string email)
         {
-            Uporabnik uporabnik = App.Uporabnik;
+            this.Uporabnik.Ime = ime;
+            this.Uporabnik.Priimek = priimek;
+            this.Uporabnik.UporabniskoIme = uporabniskoIme;
+            this.Uporabnik.Email = email;
 
-            this.Ime = uporabnik.Ime;
-            this.Priimek = uporabnik.Priimek;
-            this.UporabniskoIme = uporabnik.UporabniskoIme;
-            this.Email = uporabnik.Email;
-
+            App.Database.UpdateUser(Uporabnik);
         }
+        
+
+
     }
 }
