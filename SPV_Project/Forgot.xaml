@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SPV_Project.Forgot"
+             Title="Forgot Password">
+    <Grid>
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#D5F889" Offset="0.1"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <StackLayout>
+            <Label Text="Forgot Password" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" />
+            <Image Source="logo.png" HeightRequest="200" HorizontalOptions="Center" Margin="50,0,0,0"/>
+            <Label Text="Enter your email to reset your password:"  Margin="20,10" />
+            <Entry Placeholder="Email" Keyboard="Email"  Margin="20,10"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                <Button Text="Reset Password" BackgroundColor="#D5F889" TextColor="Black" Margin="0,0,5,0" WidthRequest="150"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
