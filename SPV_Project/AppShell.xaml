@@ -7,31 +7,32 @@
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="Profile">
+        <Tab Title="" Icon="profile.png">
             <ShellContent
                 Title="Profile"
                 ContentTemplate="{DataTemplate local:Profile}"
-                Route="Profile" />
+                Route="Profile" 
+                />
         </Tab>
-        <Tab Title="Exercises History">
+        <Tab Title="" Icon="history.png">
             <ShellContent
                 Title="Exercises History"
                 ContentTemplate="{DataTemplate local:ExercisesHistory}"
                 Route="ExercisesHistory" />
         </Tab>
-        <Tab Title="Scanner">
+        <Tab Title="" Icon="camera.png">
             <ShellContent
                 Title="Scanner"
                 ContentTemplate="{DataTemplate local:Scanner}"
                 Route="Scanner" />
         </Tab>
-        <Tab Title="My Exercise">
+        <Tab Title="" Icon="man.png">
             <ShellContent
                 Title="My Exercise"
                 ContentTemplate="{DataTemplate local:MyExercise}"
                 Route="MyExercise" />
         </Tab>
-        <Tab Title="All Exercises">
+        <Tab Title="" Icon="book.png">
             <ShellContent
                 Title="All Exercises"
                 ContentTemplate="{DataTemplate local:AllExercises}"
