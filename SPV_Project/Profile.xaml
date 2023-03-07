@@ -44,7 +44,14 @@
                 </Border.StrokeShape>
                 <Entry x:Name="Email" Text="{Binding Uporabnik.Email}" IsReadOnly="False" TextColor="Black"/>
             </Border>
-            <Button Text="Uredi" Clicked="Edit_Clicked" Margin="0,15,0,0" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                <Border Stroke="black" StrokeThickness="1" Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Button Text="Uredi" Clicked="Edit_Clicked"  BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+                </Border>
+            </StackLayout>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>
