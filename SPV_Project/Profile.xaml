@@ -4,23 +4,47 @@
              x:Class="SPV_Project.Profile"
              Title="Profile">
     <Grid>
-        <Grid.RowDefinitions>
-            
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-    
+        
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#D5F889" Offset="0.1"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        
         <VerticalStackLayout Grid.Column="0" Margin="15,0,15,0">
-            <Label Text="Ime:"/>
-            <Entry x:Name="Ime" Text="{Binding Uporabnik.Ime}" IsReadOnly="False"/>
-            <Label Text="Priimek:"/>
-            <Entry x:Name="Priimek" Text="{Binding Uporabnik.Priimek}" IsReadOnly="False"/>
-            <Label Text="Uporabniško ime:"/>
-            <Entry x:Name="UporabniskoIme" Text="{Binding Uporabnik.UporabniskoIme}" IsReadOnly="False"/>
-            <Label Text="Email:"/>
-            <Entry x:Name="Email" Text="{Binding Uporabnik.Email}" IsReadOnly="False"/>
-            <Button Text="Edit" Clicked="Edit_Clicked" Margin="0,15,0,0"/>
+            <Label Text="Profil" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
+            <Label Text="Ime:" TextColor="Black"/>
+            <Border Stroke="black" StrokeThickness="1" Margin="5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Entry x:Name="Ime" Text="{Binding Uporabnik.Ime}" IsReadOnly="False" />
+            </Border>
+            <Label Text="Priimek:" TextColor="Black"/>
+            <Border Stroke="black" StrokeThickness="1" Margin="5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Entry x:Name="Priimek" Text="{Binding Uporabnik.Priimek}" IsReadOnly="False" />
+            </Border>
+            <Label Text="Uporabniško ime:" TextColor="Black"/>
+            <Border Stroke="black" StrokeThickness="1" Margin="5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Entry x:Name="UporabniskoIme" Text="{Binding Uporabnik.UporabniskoIme}" IsReadOnly="False" />
+            </Border>
+            <Label Text="Email:" TextColor="Black"/>
+            <Border Stroke="black" StrokeThickness="1" Margin="5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Entry x:Name="Email" Text="{Binding Uporabnik.Email}" IsReadOnly="False" />
+            </Border>
+            <Button Text="Uredi" Clicked="Edit_Clicked" Margin="0,15,0,0" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>
