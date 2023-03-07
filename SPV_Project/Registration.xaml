@@ -12,7 +12,8 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <StackLayout>
+        <ScrollView>
+            <StackLayout>
             <Label Text="BeeFit" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" TextColor="Black"/>
             <Image Source="logo.png" HeightRequest="200" HorizontalOptions="Center" Margin="50,0,0,0"/>
             <Label Text="Registracija" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,10" TextColor="Black"/>
@@ -64,15 +65,15 @@
                 <Button Text="Prijava" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Blue" VerticalOptions="Center"/>
 		    </StackLayout>
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
-                <Border Stroke="black" StrokeThickness="1" Margin="5">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="10"/>
-                    </Border.StrokeShape>
-                    <Button Text="Registracija" HorizontalOptions="Center" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
-                </Border>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                    <Border Stroke="black" StrokeThickness="1" Margin="5">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Button Text="Registracija" HorizontalOptions="Center" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+                    </Border>
+                </StackLayout>
             </StackLayout>
-
-	    </StackLayout>
+        </ScrollView>
     </Grid>
 </ContentPage>
