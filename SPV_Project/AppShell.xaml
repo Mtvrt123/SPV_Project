@@ -9,43 +9,43 @@
     <TabBar>
         <Tab Title="" Icon="profile.png">
             <ShellContent
-                Title="Profile"
+                Title="Profil"
                 ContentTemplate="{DataTemplate local:Profile}"
                 Route="Profile"/>
         </Tab>
         <Tab Title="" Icon="history.png">
             <ShellContent
-                Title="Exercises History"
+                Title="Zgodovina aktivnosti"
                 ContentTemplate="{DataTemplate local:ExercisesHistory}"
                 Route="ExercisesHistory" />
         </Tab>
         <Tab Title="" Icon="camera.png">
             <ShellContent
-                Title="Scanner"
+                Title="Kamera"
                 ContentTemplate="{DataTemplate local:Scanner}"
                 Route="Scanner" />
         </Tab>
         <Tab Title="" Icon="man.png">
             <ShellContent
-                Title="My Exercise"
+                Title="Vadba"
                 ContentTemplate="{DataTemplate local:MyExercise}"
                 Route="MyExercise" />
         </Tab>
         <Tab Title="" Icon="book.png">
             <ShellContent
-                Title="All Exercises"
+                Title="Vse vaje"
                 ContentTemplate="{DataTemplate local:AllExercises}"
                 Route="AllExercises" />
         </Tab>
         <Tab Title="Login">
             <ShellContent
-                Title="Login"
+                Title="Prijava"
                 ContentTemplate="{DataTemplate local:Login}"
                 Route="Login" />
         </Tab>
         <Tab Title="Registration">
             <ShellContent
-                Title="Registration"
+                Title="Registracija"
                 ContentTemplate="{DataTemplate local:Registration}"
                 Route="Registration" />
         </Tab>

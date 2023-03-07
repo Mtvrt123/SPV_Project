@@ -31,7 +31,7 @@
                     </Border.StrokeShape>
                     <Entry x:Name="Priimek" Text="{Binding Uporabnik.Priimek}" IsReadOnly="False" TextColor="Black"/>
                 </Border>
-                <Label Text="UporabniÅ¡ko ime:" TextColor="Black"/>
+                <Label Text="Uporabniško ime:" TextColor="Black"/>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
