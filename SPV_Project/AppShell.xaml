@@ -37,6 +37,18 @@
                 ContentTemplate="{DataTemplate local:AllExercises}"
                 Route="AllExercises" />
         </Tab>
+        <Tab Title="Login">
+            <ShellContent
+                Title="Login"
+                ContentTemplate="{DataTemplate local:Login}"
+                Route="Login" />
+        </Tab>
+        <Tab Title="Registration">
+            <ShellContent
+                Title="Registration"
+                ContentTemplate="{DataTemplate local:Registration}"
+                Route="Registration" />
+        </Tab>
     </TabBar>
 
 </Shell>
