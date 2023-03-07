@@ -21,14 +21,14 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
-                <Entry Keyboard="Text"  Margin="20,10"/>
+                <Entry Keyboard="Text"  Margin="20,10" TextColor="Black"/>
             </Border>
             <Label Text="Geslo:"  Margin="20,10" TextColor="Black"/>
             <Border Stroke="black" StrokeThickness="1" Margin="5">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
-                <Entry IsPassword="True" Margin="20,10"/>
+                <Entry IsPassword="True" Margin="20,10" TextColor="Black"/>
             </Border>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
                 <Label Text="Nimate računa?" TextColor="Black" VerticalOptions="Center"/>

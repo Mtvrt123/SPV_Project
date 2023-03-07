@@ -21,42 +21,42 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
-                <Entry Keyboard="Text" Margin="20,10" />
+                <Entry Keyboard="Text" Margin="20,10" TextColor="Black"/>
             </Border>
             <Label Text="Priimek:"  Margin="20,15,0,10" TextColor="Black"/>
             <Border Stroke="black" StrokeThickness="1" Margin="5">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
-                <Entry Keyboard="Text" Margin="20,10" />
+                <Entry Keyboard="Text" Margin="20,10" TextColor="Black"/>
             </Border>
             <Label Text="Uporabniško ime:"  Margin="20,15,0,10" TextColor="Black"/>
             <Border Stroke="black" StrokeThickness="1" Margin="5">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
-                <Entry Keyboard="Text" Margin="20,10" />
+                <Entry Keyboard="Text" Margin="20,10" TextColor="Black"/>
             </Border>
             <Label Text="Email:"  Margin="20,15,0,0" TextColor="Black"/>
             <Border Stroke="black" StrokeThickness="1" Margin="5">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
-                <Entry Keyboard="Email" Margin="20,10" />
+                <Entry Keyboard="Email" Margin="20,10" TextColor="Black"/>
             </Border>
             <Label Text="Geslo:"  Margin="20,15,0,10" TextColor="Black"/>
             <Border Stroke="black" StrokeThickness="1" Margin="5">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
-                <Entry IsPassword="True" Margin="20,10" />
+                <Entry IsPassword="True" Margin="20,10" TextColor="Black"/>
             </Border>
             <Label Text="Ponovi geslo:"  Margin="20,15,0,10" TextColor="Black"/>
             <Border Stroke="black" StrokeThickness="1" Margin="5">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
-                <Entry IsPassword="True" Margin="20,10" />
+                <Entry IsPassword="True" Margin="20,10" TextColor="Black"/>
             </Border>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
