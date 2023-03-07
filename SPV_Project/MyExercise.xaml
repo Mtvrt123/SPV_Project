@@ -3,10 +3,67 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SPV_Project.MyExercise"
              Title="MyExercise">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#D5F889" Offset="0.1"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <ScrollView>
+            <VerticalStackLayout Grid.Column="0" Margin="15,0,15,0">
+                <Label Text="Vadba" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
+                <Label Text="Izberite" TextColor="Black" HorizontalOptions="Center" Margin="0,0,0,50"/>
+
+                <Border Stroke="black" StrokeThickness="1" Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Picker TextColor="Black" />
+                </Border>
+                <Border Stroke="black" StrokeThickness="1" Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Picker TextColor="Black" />
+                </Border>
+                <Border Stroke="black" StrokeThickness="1" Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Picker TextColor="Black" />
+                </Border>
+                <Border Stroke="black" StrokeThickness="1" Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Picker TextColor="Black" />
+                </Border>
+                <Border Stroke="black" StrokeThickness="1" Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Entry />
+                </Border>
+                <Border Stroke="black" StrokeThickness="1" Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Picker TextColor="Black" />
+                </Border>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                    <Border Stroke="black" StrokeThickness="1" Margin="5">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10"/>
+                        </Border.StrokeShape>
+                        <Button Text="Začni" HorizontalOptions="Center" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+                    </Border>
+                </StackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>
