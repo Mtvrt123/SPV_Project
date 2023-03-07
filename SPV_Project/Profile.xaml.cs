@@ -6,10 +6,9 @@ namespace SPV_Project;
 public partial class Profile : ContentPage
 {
 
-	public Profile(ProfileViewModel vm)
+	public Profile()
 	{
 		InitializeComponent();
-		BindingContext = vm;
     }
 	
 }
