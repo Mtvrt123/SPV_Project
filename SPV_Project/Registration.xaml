@@ -3,18 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SPV_Project.Registration"
              Title="Registration" BackgroundColor="#D5F889">
-	<StackLayout>
-		<Label Text="Registracija" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" />
-		<Entry Placeholder="First Name" Keyboard="Text" Margin="20,10" />
-		<Entry Placeholder="Last Name" Keyboard="Text" Margin="20,10" />
-		<Entry Placeholder="Username" Keyboard="Text" Margin="20,10" />
-		<Entry Placeholder="Email" Keyboard="Email" Margin="20,10" />
-		<Entry Placeholder="Password" IsPassword="True" Margin="20,10" />
-		<Entry Placeholder="Confirm Password" IsPassword="True" Margin="20,10" />
-		<Button Text="Registracija" HorizontalOptions="Center" Margin="20,30" />
-		<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-			<Label Text="Že imate račun?" Margin="0,0,5,0" />
-			<Button Text="Prijava" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Blue" />
-		</StackLayout>
-	</StackLayout>
+    <Grid>
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#D5F889" Offset="0.1"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <StackLayout>
+            <Label Text="Registracija" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" TextColor="Black"/>
+		    <Entry Placeholder="First Name" Keyboard="Text" Margin="20,10" />
+		    <Entry Placeholder="Last Name" Keyboard="Text" Margin="20,10" />
+		    <Entry Placeholder="Username" Keyboard="Text" Margin="20,10" />
+		    <Entry Placeholder="Email" Keyboard="Email" Margin="20,10" />
+		    <Entry Placeholder="Password" IsPassword="True" Margin="20,10" />
+		    <Entry Placeholder="Confirm Password" IsPassword="True" Margin="20,10" />
+            <Button Text="Registracija" HorizontalOptions="Center" Margin="20,30" TextColor="Black"/>
+		    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Že imate račun?" Margin="0,0,5,0" TextColor="Black"/>
+			    <Button Text="Prijava" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Blue" />
+		    </StackLayout>
+	    </StackLayout>
+    </Grid>
 </ContentPage>
