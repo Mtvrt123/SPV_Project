@@ -3,10 +3,56 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SPV_Project.MyExerciseInfo"
              Title="MyExerciseInfo">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid>
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#D5F889" Offset="0.1"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <StackLayout>
+            <Label Text="Vaje" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
+
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="200">
+                <Label Text="01.01.2023" HorizontalOptions="StartAndExpand" Margin="5,0,0,0"/>
+                <Label Text="00:00:00" HorizontalOptions="EndAndExpand" Margin="0,0,5,0"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
+                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
+                    <Label Text="Vaja1" FontSize="Large" TextColor="White" />
+                </Frame>
+                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
+                    <Label Text="Vaja2" FontSize="Large" TextColor="White" />
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
+                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
+                    <Label Text="Vaja3" FontSize="Large" TextColor="White" />
+                </Frame>
+                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
+                    <Label Text="Vaja4" FontSize="Large" TextColor="White" />
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
+                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
+                    <Label Text="Vaja5" FontSize="Large" TextColor="White" />
+                </Frame>
+                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
+                    <Label Text="Vaja6" FontSize="Large" TextColor="White" />
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                <Border Stroke="black" StrokeThickness="1" Margin="5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+                    <Button Text="Končaj"  BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+                </Border>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
 </ContentPage>

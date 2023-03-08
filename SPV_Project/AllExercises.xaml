@@ -15,12 +15,7 @@
         </Border>
 
         <StackLayout>
-            <Label Text="Vaje" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
-
-            <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="200">
-                <Label Text="01.01.2023" HorizontalOptions="StartAndExpand" Margin="5,0,0,0"/>
-                <Label Text="00:00:00" HorizontalOptions="EndAndExpand" Margin="0,0,5,0"/>
-            </StackLayout>
+            <Label Text="Vse vaje" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
                 <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
                     <Label Text="Vaja1" FontSize="Large" TextColor="White" />
@@ -44,14 +39,6 @@
                 <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
                     <Label Text="Vaja6" FontSize="Large" TextColor="White" />
                 </Frame>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
-                <Border Stroke="black" StrokeThickness="1" Margin="5">
-                    <Border.StrokeShape>
-                       <RoundRectangle CornerRadius="10"/>
-                    </Border.StrokeShape>
-                    <Button Text="Končaj"  BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
-                </Border>
             </StackLayout>
         </StackLayout>
     </Grid>
