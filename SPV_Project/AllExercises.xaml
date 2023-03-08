@@ -3,10 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SPV_Project.AllExercises"
              Title="AllExercises">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <StackLayout>
+        <Label Text="Vaje" />
+        <Label Text="1.1.2023" />
+        <Label Text="00:00:00" />
+        <StackLayout Orientation="Horizontal">
+            <Frame BackgroundColor="LightBlue" Padding="10">
+                <Label Text="Vaja1" FontSize="Large" TextColor="White" />
+            </Frame>
+            <Frame BackgroundColor="LightBlue" Padding="10">
+                <Label Text="Vaja2" FontSize="Large" TextColor="White" />
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Frame BackgroundColor="LightBlue" Padding="10">
+                <Label Text="Vaja3" FontSize="Large" TextColor="White" />
+            </Frame>
+            <Frame BackgroundColor="LightBlue" Padding="10">
+                <Label Text="Vaja4" FontSize="Large" TextColor="White" />
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Frame BackgroundColor="LightBlue" Padding="10">
+                <Label Text="Vaja5" FontSize="Large" TextColor="White" />
+            </Frame>
+            <Frame BackgroundColor="LightBlue" Padding="10">
+                <Label Text="Vaja6" FontSize="Large" TextColor="White" />
+            </Frame>
+        </StackLayout>
+        <Button Text="Končaj"  BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+
+    </StackLayout>
+    
+
 </ContentPage>
