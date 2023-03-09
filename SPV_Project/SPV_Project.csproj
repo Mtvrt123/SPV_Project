@@ -55,6 +55,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="FoodInformation.xaml.cs">
+	    <DependentUpon>FoodInformation.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="FoodInformation.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="AllExercises.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

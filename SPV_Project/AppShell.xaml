@@ -37,6 +37,12 @@
                 ContentTemplate="{DataTemplate local:AllExercises}"
                 Route="AllExercises" />
         </Tab>
+        <Tab Title="" Icon="camera.png">
+            <ShellContent
+                Title="Podrobnosti o živilu"
+                ContentTemplate="{DataTemplate local:FoodInformation}"
+                Route="FoodInformation" />
+        </Tab>
         <Tab Title="Login">
             <ShellContent
                 Title="Prijava"

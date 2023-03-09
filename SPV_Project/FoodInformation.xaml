@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SPV_Project.FoodInformation"
+             Title="AllExercises">
+
+    <Grid>
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#D5F889" Offset="0.1"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Ime živila" FontSize="Header"/>
+                <Label Text="Maščobe:"/>
+                <Label Text="Sladkor:"/>
+                <Label Text="Energijska vrednost:"/>
+                <Label Text="Beljakovine:"/>
+                <Label Text="Sol:"/>
+                <Label Text="Ogljikovi hidrati:"/>
+                <Label Text="Prehranske vlaknine:"/>
+                <Label Text="Nasičene maščobe:"/>
+                <Label Text="Nenasičene maščobe:"/>
+                <Label Text="Povprečna hranilna vrednost:"/>
+                
+                <Label Text="Sestavine"/>
+                <Editor AutoSize="TextChanges"/>
+                <Label Text="Alergeni"/>
+                <Editor AutoSize="TextChanges"/>
+                <Label Text="Neto količina živila"/>
+                <Editor AutoSize="TextChanges"/>
+                <Label Text="Naziv proizvajalca"/>
+                <Editor AutoSize="TextChanges"/>
+                <Label Text="Država porekla"/>
+                <Editor AutoSize="TextChanges"/>
+                <Label Text="Datum uporabe"/>
+                <Editor AutoSize="TextChanges"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
