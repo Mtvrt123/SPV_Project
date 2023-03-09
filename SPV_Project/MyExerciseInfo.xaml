@@ -17,7 +17,7 @@
         <StackLayout>
             <Label Text="Vaje" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
 
-            <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="200">
+            <StackLayout  Orientation="Horizontal" Spacing="200">
                 <Label Text="01.01.2023" HorizontalOptions="StartAndExpand" Margin="5,0,0,0"/>
                 <Label Text="00:00:00" HorizontalOptions="EndAndExpand" Margin="0,0,5,0"/>
             </StackLayout>

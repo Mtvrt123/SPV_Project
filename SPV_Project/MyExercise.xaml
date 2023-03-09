@@ -60,7 +60,7 @@
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10"/>
                         </Border.StrokeShape>
-                        <Button Text="Začni" HorizontalOptions="Center" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+                        <Button Text="Začni" HorizontalOptions="Center" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150" Clicked="Button_Clicked"/>
                     </Border>
                 </StackLayout>
             </VerticalStackLayout>
