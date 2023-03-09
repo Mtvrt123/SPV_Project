@@ -15,9 +15,9 @@
         <ScrollView>
             <StackLayout HorizontalOptions="Center">
                 <Label Text="BeeFit" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" TextColor="Black"/>
-                <Image Source="logo.png" HeightRequest="200" HorizontalOptions="Center" Margin="50,0,0,0"/>
-                <Label Text="Prijava" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
-                <Label Text="Uporabniško ime:"  Margin="20,10" TextColor="Black"/>
+                <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="100" />
+                <Label Text="Prijava" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,10" TextColor="Black"/>
+                <Label Text="Email:"  Margin="20,10" TextColor="Black"/>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
@@ -31,11 +31,11 @@
                     </Border.StrokeShape>
                     <Entry IsPassword="True" Margin="20,10" TextColor="Black" x:Name="Password"/>
                 </Border>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
                     <Label Text="Pozabli geslo?" TextColor="Black" VerticalOptions="Center"/>
                     <Button Text="Ponastavi" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Blue" Clicked="Button_Clicked_1" IsEnabled="True" VerticalOptions="Center"/>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                     <Label Text="Nimate računa?" TextColor="Black" VerticalOptions="Center"/>
                     <Button Text="Registracija" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Blue" Clicked="Button_Clicked" IsEnabled="True" VerticalOptions="Center"/>
                 </StackLayout>

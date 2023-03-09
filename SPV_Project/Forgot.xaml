@@ -14,7 +14,7 @@
         </Border>
         <StackLayout>
             <Label Text="Forgot Password" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" />
-            <Image Source="logo.png" HeightRequest="200" HorizontalOptions="Center" Margin="50,0,0,0"/>
+            <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="100" />
             <Label Text="Enter your email to reset your password:"  Margin="20,10" />
             <Entry Placeholder="Email" Keyboard="Email"  Margin="20,10"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
