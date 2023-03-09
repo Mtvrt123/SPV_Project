@@ -12,13 +12,16 @@ using System.Numerics;
 using System.Collections.ObjectModel;
 using Google.Protobuf.Collections;
 using Microsoft.Maui.Controls;
-using Microsoft.UI.Xaml.Controls;
+using System.Security.Cryptography;
+using Microsoft.Maui.ApplicationModel.Communication;
 
 namespace SPV_Project
 {
     public class Database
     {
         private MySqlConnection conn;
+
+        private Uporabnik uporabnik;
 
         public Database() 
         {
@@ -28,30 +31,7 @@ namespace SPV_Project
 
         public Uporabnik GetUser()
         {
-
-            conn.Open();
-            MySqlCommand command = new MySqlCommand("Select * from uporabnik where uporabnik_ID=@id", conn);
-            command.Parameters.AddWithValue("@id", "1");
-
-            int result = command.ExecuteNonQuery();
-
-            Uporabnik uporabnik = null;
-            using (MySqlDataReader reader = command.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                    int id = (int)reader["uporabnik_ID"];
-                    string email = (string)reader["email"];
-                    string password = (string)reader["geslo"];
-
-                    uporabnik = new Uporabnik(id, "IME", "PRIIMEK", "USERNAME", email, password);
-                }
-
-            }
-
-            conn.Close();
-
-            return uporabnik;
+            return this.uporabnik;
         }
 
         public void UpdateUser(Uporabnik uporabnik)
@@ -163,6 +143,53 @@ namespace SPV_Project
 
             return vaje;
 
+        }
+
+        public bool Login(string username, string password)
+        {
+            Uporabnik uporabnik = null;
+
+            // !!! BACKDOOR FOR TESTING AND PEOPLE WHO DONT HAVE DB SETUP !!!
+            if (username == null && password == null)
+            {
+                uporabnik = new Uporabnik(1, "IME", "PRIIMEK", "USERNAME", "EMAIL", "PASSWORD");
+            }
+            else
+            {
+                conn.Open();
+                MySqlCommand command = new MySqlCommand("Select * from uporabnik where email=@email and geslo=@geslo", conn);
+                command.Parameters.AddWithValue("@email", username);
+                command.Parameters.AddWithValue("@geslo", Convert.ToHexString(SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(password)))).ToString().ToLower();
+
+                int result = command.ExecuteNonQuery();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        int id = (int)reader["uporabnik_ID"];
+                        string email = (string)reader["email"];
+                        string pass = (string)reader["geslo"];
+
+                        uporabnik = new Uporabnik(id, "IME", "PRIIMEK", "USERNAME", email, pass);
+                    }
+
+                }
+
+                conn.Close();
+            }
+
+
+            if (uporabnik != null)
+            {
+                this.uporabnik = uporabnik;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
     }
 }

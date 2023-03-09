@@ -16,4 +16,10 @@ public partial class Login : ContentPage
     {
         this.Navigation.PushAsync(new Forgot());
     }
+
+    private void Button_Login(object sender, EventArgs e)
+    {
+        AppShell.Instance.setTabs(App.Database.Login(Username.Text, Password.Text));
+
+    }
 }

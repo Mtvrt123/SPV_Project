@@ -6,38 +6,38 @@
     xmlns:local="clr-namespace:SPV_Project"
     Shell.FlyoutBehavior="Disabled">
 
-    <TabBar>
-        <Tab Title="" Icon="profile.png" x:Name="Profile" IsEnabled="False" IsVisible="False">
+    <TabBar x:Name="Tabbar" IsVisible="True">
+        <Tab Title="" Icon="profile.png" x:Name="Profile" IsEnabled="True" IsVisible="False">
             <ShellContent
                 Title="Profil"
                 ContentTemplate="{DataTemplate local:Profile}"
                 Route="Profile"/>
         </Tab>
-        <Tab Title="" Icon="history.png" x:Name="ExercisesHistory" IsEnabled="False" IsVisible="False">
+        <Tab Title="" Icon="history.png" x:Name="ExercisesHistory" IsEnabled="True" IsVisible="False">
             <ShellContent
                 Title="Zgodovina aktivnosti"
                 ContentTemplate="{DataTemplate local:ExercisesHistory}"
                 Route="ExercisesHistory" />
         </Tab>
-        <Tab Title="" Icon="camera.png" x:Name="Scanner" IsEnabled="False" IsVisible="False">
+        <Tab Title="" Icon="camera.png" x:Name="Scanner" IsEnabled="True" IsVisible="False">
             <ShellContent
                 Title="Kamera"
                 ContentTemplate="{DataTemplate local:Scanner}"
                 Route="Scanner" />
         </Tab>
-        <Tab Title="" Icon="man.png" x:Name="MyExercise" IsEnabled="False" IsVisible="False">
+        <Tab Title="" Icon="man.png" x:Name="MyExercise" IsEnabled="True" IsVisible="False">
             <ShellContent
                 Title="Vadba"
                 ContentTemplate="{DataTemplate local:MyExercise}"
                 Route="MyExercise" />
         </Tab>
-        <Tab Title="" Icon="book.png" x:Name="AllExercises" IsEnabled="False" IsVisible="False">
+        <Tab Title="" Icon="book.png" x:Name="AllExercises" IsEnabled="True" IsVisible="False">
             <ShellContent
                 Title="Vse vaje"
                 ContentTemplate="{DataTemplate local:AllExercises}"
                 Route="AllExercises" />
         </Tab>
-        <Tab Title="" Icon="camera.png" x:Name="FoodInformation" IsEnabled="False" IsVisible="False">
+        <Tab Title="" Icon="camera.png" x:Name="FoodInformation" IsEnabled="True" IsVisible="False">
             <ShellContent
                 Title="Podrobnosti o živilu"
                 ContentTemplate="{DataTemplate local:FoodInformation}"

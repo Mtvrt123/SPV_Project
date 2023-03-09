@@ -7,14 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SPV_Project.ViewModel
-{
+{ 
     public class ProfileViewModel : ObservableObject
     {
         public Uporabnik Uporabnik { get; private set; }
 
         public ProfileViewModel()
         {
-            this.Uporabnik = App.Database.GetUser();
+            GetUser();
         }
 
         public void UpdateData(string ime, string priimek, string uporabniskoIme, string email)
@@ -27,7 +27,12 @@ namespace SPV_Project.ViewModel
             App.Database.UpdateUser(Uporabnik);
         }
         
+        public void GetUser()
+        {
+            this.Uporabnik = App.Database.GetUser();
 
+            base.OnPropertyChanged(nameof(Uporabnik));
+        }
 
     }
 }

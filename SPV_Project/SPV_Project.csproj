@@ -39,7 +39,39 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+		<MauiImage Update="Resources\Images\barcode.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\book.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\camera.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\filter.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\history.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\home.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\logo.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\logo.svg">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\man.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
+		<MauiImage Update="Resources\Images\profile.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</MauiImage>
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />

@@ -9,11 +9,15 @@ public partial class Profile : ContentPage
 
 	private ProfileViewModel profileViewModel;
 
+    public static Profile Instance { get; private set; }
+
     public Profile(ProfileViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;
 		profileViewModel = vm;
+
+        Instance = this;
     }
 
     private void Edit_Clicked(object sender, EventArgs e)
