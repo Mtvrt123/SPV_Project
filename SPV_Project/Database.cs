@@ -52,7 +52,16 @@ namespace SPV_Project
 
         public void UpdateUser(Uporabnik uporabnik)
         {
-            // Update user in database
+            
+            conn.Open();
+            MySqlCommand command = new MySqlCommand("UPDATE uporabnik SET email=@email, geslo=@geslo WHERE uporabnik_ID=@id", conn);
+            command.Parameters.AddWithValue("@id", uporabnik.UporabnikID);
+            command.Parameters.AddWithValue("@email", uporabnik.Email);
+            command.Parameters.AddWithValue("@geslo", uporabnik.Geslo);
+
+            int result = command.ExecuteNonQuery();
+
+            conn.Close();
         }
 
 
