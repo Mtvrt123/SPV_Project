@@ -15,7 +15,7 @@
         <ScrollView>
             <StackLayout HorizontalOptions="Center">
                 <Label Text="BeeFit" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" TextColor="Black"/>
-                <Image Source="logo.png" HeightRequest="200" HorizontalOptions="Center" Margin="50,0,0,0"/>
+                <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="100" />
                 <Label Text="Registracija" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,10" TextColor="Black"/>
                 <!--<Label Text="Ime:"  Margin="20,15,0,10" TextColor="Black"/>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">

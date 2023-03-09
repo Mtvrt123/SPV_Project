@@ -15,8 +15,8 @@
         <ScrollView>
             <StackLayout HorizontalOptions="Center">
                 <Label Text="BeeFit" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" TextColor="Black"/>
-                <Image Source="logo.png" HeightRequest="200" HorizontalOptions="Center" Margin="50,0,0,0"/>
-                <Label Text="Prijava" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
+                <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="100" />
+                <Label Text="Prijava" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,10" TextColor="Black"/>
                 <Label Text="Uporabniško ime:"  Margin="20,10" TextColor="Black"/>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
