@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SPV_Project.FoodInformation"
-             Title="AllExercises">
+             Title="FoodInformation">
 
     <Grid>
         <Border>
@@ -16,30 +16,52 @@
 
         <ScrollView>
             <StackLayout>
-                <Label Text="Ime živila" FontSize="Header"/>
+                <Label FontSize="Header" x:Name="imeZivila" Text="{Binding Izdelek.Ime}"/>
+                
                 <Label Text="Maščobe:"/>
+                <Label x:Name="mascobe" Text="{Binding Izdelek.Mascobe}"/>
+                
                 <Label Text="Sladkor:"/>
+                <Label x:Name="sladkor" Text="{Binding Izdelek.Sladkorji}"/>
+                
                 <Label Text="Energijska vrednost:"/>
+                <Label x:Name="energijskaVrednost" Text="{Binding Izdelek.EnergijskaVrednost}"/>
+                
                 <Label Text="Beljakovine:"/>
+                <Label x:Name="beljakovine" Text="{Binding Izdelek.Beljakovine}"/>
+                
                 <Label Text="Sol:"/>
+                <Label x:Name="sol" Text="{Binding Izdelek.Sol}"/>
+                
                 <Label Text="Ogljikovi hidrati:"/>
+                <Label x:Name="ogljikoviHidrati" Text="{Binding Izdelek.OgljikoviHidrati}"/>
+                
                 <Label Text="Prehranske vlaknine:"/>
+                <Label x:Name="prehranskeVlaknine" Text="{Binding Izdelek.PrehranskeVlaknine}"/>
+                
                 <Label Text="Nasičene maščobe:"/>
+                <Label x:Name="nasiceneMascobe" Text="{Binding Izdelek.NasiceneMascobe}"/>
+                
                 <Label Text="Nenasičene maščobe:"/>
+                <Label x:Name="nenasiceneMascobe" Text="{Binding Izdelek.NenasiceneMascobe}"/>
+                
                 <Label Text="Povprečna hranilna vrednost:"/>
+                <Label x:Name="povprecnaHranilnaVrednost" Text="{Binding Izdelek.PovprecnaHranilnaVrednost}"/>
+                
+                
                 
                 <Label Text="Sestavine"/>
-                <Editor AutoSize="TextChanges"/>
+                <Editor AutoSize="TextChanges" Text="{Binding Izdelek.Sestavine}"/>
                 <Label Text="Alergeni"/>
-                <Editor AutoSize="TextChanges"/>
+                <Editor AutoSize="TextChanges" Text="{Binding Izdelek.Alergeni}"/>
                 <Label Text="Neto količina živila"/>
-                <Editor AutoSize="TextChanges"/>
+                <Editor AutoSize="TextChanges" Text="{Binding Izdelek.NetoKolicinaZivila}"/>
                 <Label Text="Naziv proizvajalca"/>
-                <Editor AutoSize="TextChanges"/>
+                <Editor AutoSize="TextChanges" Text="{Binding Izdelek.NazivProizvajalca}"/>
                 <Label Text="Država porekla"/>
-                <Editor AutoSize="TextChanges"/>
+                <Editor AutoSize="TextChanges" Text="{Binding Izdelek.DrzavaPorekla}"/>
                 <Label Text="Datum uporabe"/>
-                <Editor AutoSize="TextChanges"/>
+                <Editor AutoSize="TextChanges" Text="{Binding Izdelek.DatumUporabe}"/>
             </StackLayout>
         </ScrollView>
     </Grid>

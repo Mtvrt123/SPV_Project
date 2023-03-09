@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Math;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,5 +28,36 @@ namespace SPV_Project.Models
         public decimal Beljakovine { get; set; }
         public decimal Sol { get; set; }
         public long Koda { get; set; }
+
+        public Izdelek()
+        {
+
+        }
+
+        public Izdelek(int izdelekID, string ime, string sestavine, string alergeni, int netoKolicina, string nazivProizvajalca,
+            string drzavaPorekla, DateTime datumUporabe, decimal povprecnaHranilnaVrednost, decimal energijskaVrednost, decimal mascobe,
+            decimal nasiceneMascobneKisline, decimal nenasiceneMascobneKisline, decimal ogljikoviHidrati, decimal sladkorji,
+            decimal prehranskeVlaknine, decimal beljakovine, decimal sol)
+        {
+            IzdelekID = izdelekID;
+            Ime = ime;
+            Sestavine = sestavine;
+            Alergeni = alergeni;
+            NetoKolicina = netoKolicina;
+            NazivProizvajalca = nazivProizvajalca;
+            DrzavaPorekla = drzavaPorekla;
+            DatumUporabe = datumUporabe;
+            PovprecnaHranilnaVrednost = povprecnaHranilnaVrednost;
+            EnergijskaVrednost = energijskaVrednost;
+            Mascobe = mascobe;
+            NasiceneMascobneKisline = nasiceneMascobneKisline;
+            NenasiceneMascobneKisline = nenasiceneMascobneKisline;
+            OgljikoviHidrati = ogljikoviHidrati;
+            Sladkorji = sladkorji;
+            PrehranskeVlaknine = prehranskeVlaknine;
+            Beljakovine = beljakovine;
+            Sol = sol;
+            //Koda = koda;
+        }
     }
 }
