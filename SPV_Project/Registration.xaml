@@ -60,7 +60,7 @@
                     <Entry IsPassword="True" Margin="20,10" TextColor="Black"/>
                 </Border>
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
                     <Label Text="Že imate račun?" Margin="0,0,5,0" TextColor="Black" VerticalOptions="Center"/>
                     <Button Text="Prijava" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="Blue" VerticalOptions="Center" Clicked="Button_Clicked"/>
                 </StackLayout>
