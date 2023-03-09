@@ -15,7 +15,7 @@
         </Border>
 
         <ScrollView>
-            <VerticalStackLayout Grid.Column="0" Margin="15,0,15,0">
+            <VerticalStackLayout Grid.Column="0" Margin="15,0,15,0" HorizontalOptions="Center">
                 <Label Text="Vadba" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
                 <Label Text="Izberite" TextColor="Black" HorizontalOptions="Center" Margin="0,0,0,50"/>
 
