@@ -9,6 +9,10 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using System.Web;
 using System.Numerics;
+using System.Collections.ObjectModel;
+using Google.Protobuf.Collections;
+using Microsoft.Maui.Controls;
+using Microsoft.UI.Xaml.Controls;
 
 namespace SPV_Project
 {
@@ -99,11 +103,11 @@ namespace SPV_Project
                     decimal prehranskeVlaknine = (decimal)reader["prehranske_vlaknine"];
                     decimal beljakovine = (decimal)reader["beljakovine"];
                     decimal sol = (decimal)reader["sol"];
-                    //long koda = (long)reader["koda"];
+                    string koda = reader["koda"].ToString();
 
                     izdelek = new Izdelek(id, ime, sestavine, alergeni, netoKolicina, nazivProizvajalca, drzavaPorekla, datumUporabe,
                         povprecnaHranilnaVrednost, energijskaVrednost, mascobe, nasiceneMascobneKisline, nenasiceneMascobneKisline, ogljikoviHidrati, sladkorji,
-                        prehranskeVlaknine, beljakovine, sol);
+                        prehranskeVlaknine, beljakovine, sol, koda);
                 }
 
             }
@@ -111,6 +115,54 @@ namespace SPV_Project
             conn.Close();
 
             return izdelek;
+        }
+
+        internal ObservableCollection<Vaja> GetExercises()
+        {
+            ObservableCollection<Vaja> vaje = new ObservableCollection<Vaja>();
+            conn.Open();
+
+            MySqlCommand command = new MySqlCommand("Select * from vaja", conn);
+
+            MySqlDataReader dr = command.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Vaja vaja = new Vaja();
+                vaja.VadbaID = Convert.ToInt32(dr["vaja_ID"]);
+                vaja.NazivVaje = dr["naziv_vaje"].ToString();
+
+                vaja.SteviloPonovitev = dr["stevilo_ponovitev"].ToString();
+                vaja.OpisVaje = dr["opis_vaje"].ToString();
+
+                switch(dr["naziv_vaje"].ToString())
+                {
+                    case "Bench Press":
+                        vaja.SlikaVaje = "Resources/Exercises/bench_press.gif";
+                        break;
+                    case "Pullups":
+                        vaja.SlikaVaje = "Resources/Exercises/pullup.gif";
+                        break;
+                    case "Pushups":
+                        vaja.SlikaVaje = "Resources/Exercises/pushups.gif";
+                        break;
+                }
+
+                vaja.SlikaMisice = dr["slika_misice"].ToString();
+                vaja.SportnaOprema = dr["sportna_oprema"].ToString();
+                vaja.TipVadbe = dr["tip_vaje"].ToString();
+                vaja.ObremenjeneMisice = dr["obremenjene_misice"].ToString();
+                vaja.TezavnostVadbe = dr["tezavnost_vaje"].ToString();
+                vaja.ObremenjenDelTelesa = dr["obremenjen_del_telesa"].ToString();
+                vaja.Poskodbe = dr["poskodbe"].ToString();
+
+                vaje.Add(vaja);
+            }
+            
+            conn.Close();
+
+            return vaje;
+
         }
     }
 }

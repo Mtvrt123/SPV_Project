@@ -18,8 +18,12 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<FoodInformation>();
 		builder.Services.AddSingleton<IzdelekViewModel>();
+
 		builder.Services.AddSingleton<Profile>();
 		builder.Services.AddSingleton<ProfileViewModel>();
+
+		builder.Services.AddSingleton<AllExercises>();
+		builder.Services.AddSingleton<AllExercieseViewModel>();
 
 
         return builder.Build();

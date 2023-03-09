@@ -5,41 +5,32 @@
              Title="AllExercises">
 
     <Grid>
-        <Border>
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Color="#D5F889" Offset="0.1"/>
-                    <GradientStop Color="White" Offset="0.5"/>
-                </LinearGradientBrush>
-            </Border.Background>
-        </Border>
+        <ListView ItemsSource="{Binding Vaje}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2"
+                           Source="{Binding SlikaVaje}"
+                           Aspect="AspectFill"
+                           HeightRequest="100"
+                           WidthRequest="150" IsAnimationPlaying="True"/>
+                            <Label Grid.Column="1"
+                           Text="{Binding NazivVaje}"
+                           FontAttributes="Bold" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
-        <StackLayout>
-            <Label Text="Vse vaje" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
-                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja1" FontSize="Large" TextColor="White" />
-                </Frame>
-                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja2" FontSize="Large" TextColor="White" />
-                </Frame>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
-                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja3" FontSize="Large" TextColor="White" />
-                </Frame>
-                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja4" FontSize="Large" TextColor="White" />
-                </Frame>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
-                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja5" FontSize="Large" TextColor="White" />
-                </Frame>
-                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja6" FontSize="Large" TextColor="White" />
-                </Frame>
-            </StackLayout>
-        </StackLayout>
     </Grid>
 </ContentPage>

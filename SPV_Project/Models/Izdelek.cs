@@ -27,7 +27,7 @@ namespace SPV_Project.Models
         public decimal PrehranskeVlaknine { get; set; }
         public decimal Beljakovine { get; set; }
         public decimal Sol { get; set; }
-        public long Koda { get; set; }
+        public string Koda { get; set; }
 
         public Izdelek()
         {
@@ -37,7 +37,7 @@ namespace SPV_Project.Models
         public Izdelek(int izdelekID, string ime, string sestavine, string alergeni, int netoKolicina, string nazivProizvajalca,
             string drzavaPorekla, DateTime datumUporabe, decimal povprecnaHranilnaVrednost, decimal energijskaVrednost, decimal mascobe,
             decimal nasiceneMascobneKisline, decimal nenasiceneMascobneKisline, decimal ogljikoviHidrati, decimal sladkorji,
-            decimal prehranskeVlaknine, decimal beljakovine, decimal sol)
+            decimal prehranskeVlaknine, decimal beljakovine, decimal sol, string koda)
         {
             IzdelekID = izdelekID;
             Ime = ime;
@@ -57,7 +57,7 @@ namespace SPV_Project.Models
             PrehranskeVlaknine = prehranskeVlaknine;
             Beljakovine = beljakovine;
             Sol = sol;
-            //Koda = koda;
+            Koda = koda;
         }
     }
 }
