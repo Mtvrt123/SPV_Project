@@ -6,4 +6,10 @@ public partial class MyExercise : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        this.Navigation.PushAsync(new MyExerciseInfo());
+
+    }
 }

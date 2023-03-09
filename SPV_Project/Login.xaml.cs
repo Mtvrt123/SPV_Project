@@ -9,7 +9,11 @@ public partial class Login : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-       
+        this.Navigation.PushAsync(new Registration());
     }
 
+    private void Button_Clicked_1(object sender, EventArgs e)
+    {
+        this.Navigation.PushAsync(new Forgot());
+    }
 }
