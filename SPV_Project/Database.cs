@@ -191,5 +191,48 @@ namespace SPV_Project
             }
             
         }
+
+
+        public bool CheckIfEmailExists(string user)
+        {
+            Uporabnik uporabnik = null;
+
+
+                conn.Open();
+                MySqlCommand command = new MySqlCommand("Select * from uporabnik where email=@email", conn);
+                command.Parameters.AddWithValue("@email", user);
+               
+
+                int result = command.ExecuteNonQuery();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        int id = (int)reader["uporabnik_ID"];
+                        string email = (string)reader["email"];
+                        string pass = (string)reader["geslo"];
+
+                        uporabnik = new Uporabnik(id, "IME", "PRIIMEK", "USERNAME", email, pass);
+                    }
+
+                }
+
+                conn.Close();
+            
+
+
+            if (uporabnik != null)
+            {
+                this.uporabnik = uporabnik;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
     }
 }
