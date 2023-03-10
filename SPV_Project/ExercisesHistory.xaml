@@ -12,7 +12,12 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
+        <StackLayout x:Name="OpravljeneVaje">
+            <Label Text="Vaje" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
 
+          
+
+        </StackLayout>
         <ScrollView>
             <Label Text="Zgodovina aktivnosti" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,10" TextColor="Black"/>
             <!--INSERT ELEMENTS HERE-->

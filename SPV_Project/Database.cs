@@ -25,7 +25,7 @@ namespace SPV_Project
 
         public Database() 
         {
-            string connStr = "server=localhost;user=root;database=mydb;port=3306;password=";
+            string connStr = "server=localhost;user=root;database=mydb;port=3308;password=";
             conn = new MySqlConnection(connStr);
         }
 
@@ -115,7 +115,7 @@ namespace SPV_Project
         {
             var sportnaOpremaUnikatneVrednostiList = new List<string>();
 
-            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3308;password="))
             {
                 connection.Open();
                 string query = "SELECT DISTINCT sportna_oprema FROM vaja";
@@ -139,7 +139,7 @@ namespace SPV_Project
         {
             var tipVadbeUnikatneVrednostiList = new List<string>();
 
-            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3308;password="))
             {
                 connection.Open();
                 string query = "SELECT DISTINCT tip_vaje FROM vaja";
@@ -163,7 +163,7 @@ namespace SPV_Project
         {
             var obremenjeneMisiceUnikatneVrednostiList = new List<string>();
 
-            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3308;password="))
             {
                 connection.Open();
                 string query = "SELECT DISTINCT obremenjene_misice FROM vaja";
@@ -188,7 +188,7 @@ namespace SPV_Project
         {
             var tezavnostVadbeUnikatneVrednostiList = new List<string>();
 
-            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3308;password="))
             {
                 connection.Open();
                 string query = "SELECT DISTINCT tezavnost_vaje FROM vaja";
@@ -212,7 +212,7 @@ namespace SPV_Project
         {
             var poskodbeUnikatneVrednostiList = new List<string>();
 
-            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3308;password="))
             {
                 connection.Open();
                 string query = "SELECT DISTINCT poskodbe FROM vaja";
@@ -375,7 +375,7 @@ namespace SPV_Project
 
 
 
-            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3308;password="))
             {
                 connection.Open();
                 string query = "SELECT DISTINCT naziv_vaje FROM vaja WHERE sportna_oprema="+"'"+a+"'"+" and obremenjene_misice="+"'"+b+"'"+" and tezavnost_vaje="+"'"+c+"'"+" and poskodbe="+"'"+d+"'";
@@ -394,7 +394,30 @@ namespace SPV_Project
             return poskodbeUnikatneVrednostiList;
         }
 
+        public List<string> GetOpravljeneVaje(string a, string b, string c, string d)  //spremenis na uporabnika in iz nove tabele(če jo bo kdo naredil) izpises pretekle vaje.
+        {
+            var lista_vaj_uporabnika = new List<string>();
 
+
+
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3308;password="))
+            {
+                connection.Open();
+                string query = "SELECT DISTINCT naziv_vaje FROM vaja WHERE sportna_oprema=" + "'" + a + "'" + " and obremenjene_misice=" + "'" + b + "'" + " and tezavnost_vaje=" + "'" + c + "'" + " and poskodbe=" + "'" + d + "'";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            poskodbeUnikatneVrednostiList.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+
+            return lista_vaj_uporabnika;
+        }
 
 
     }

@@ -47,6 +47,12 @@ public partial class MyExerciseInfo : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
+
+
+
+        //insert into database(novo tabelo) da lahko uporabnik pregleda svoje pretekle opravljene vaje
+
+
         this.Navigation.PushAsync(new MyExercise());
     }
 }
