@@ -191,5 +191,49 @@ namespace SPV_Project
             }
             
         }
+        public bool Login1(string username, string password)
+        {
+            Uporabnik uporabnik = null;
+
+            
+            conn.Open();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM uporabnik WHERE email=@username AND geslo=@password", conn);
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@password", password);
+            ////command.Parameters.AddWithValue("@geslo", Convert.ToHexString(SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(password)))).ToString().ToLower();
+            
+            //ce poznate geslo preden je bil hashan uporabite zakomentirano vrsto za geslo
+
+
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        int id = (int)reader["uporabnik_ID"];
+                        string email = (string)reader["email"];
+                        string pass = (string)reader["geslo"];
+
+                        uporabnik = new Uporabnik(id, "IME", "PRIIMEK", "USERNAME", email, pass);
+                    }
+
+                }
+
+                conn.Close();
+            
+
+
+            if (uporabnik != null)
+            {
+                this.uporabnik = uporabnik;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
     }
 }
