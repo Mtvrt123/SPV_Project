@@ -97,6 +97,129 @@ namespace SPV_Project
             return izdelek;
         }
 
+
+        public List<string> GetVseSportneOpreme()
+        {
+            var sportnaOpremaUnikatneVrednostiList = new List<string>();
+
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            {
+                connection.Open();
+                string query = "SELECT DISTINCT sportna_oprema FROM vaja";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            sportnaOpremaUnikatneVrednostiList.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+
+            return sportnaOpremaUnikatneVrednostiList;
+        }
+
+
+        public List<string> GetVseTipeVadbe()
+        {
+            var tipVadbeUnikatneVrednostiList = new List<string>();
+
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            {
+                connection.Open();
+                string query = "SELECT DISTINCT tip_vaje FROM vaja";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            tipVadbeUnikatneVrednostiList.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+
+            return tipVadbeUnikatneVrednostiList;
+        }
+
+
+        public List<string> GetVseObremenjeneDeleTelesa()
+        {
+            var obremenjeneMisiceUnikatneVrednostiList = new List<string>();
+
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            {
+                connection.Open();
+                string query = "SELECT DISTINCT obremenjene_misice FROM vaja";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            obremenjeneMisiceUnikatneVrednostiList.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+
+            return obremenjeneMisiceUnikatneVrednostiList;
+        }
+
+
+
+        public List<string> GetVseTezavnostiVaje()
+        {
+            var tezavnostVadbeUnikatneVrednostiList = new List<string>();
+
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            {
+                connection.Open();
+                string query = "SELECT DISTINCT tezavnost_vaje FROM vaja";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            tezavnostVadbeUnikatneVrednostiList.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+
+            return tezavnostVadbeUnikatneVrednostiList;
+        }
+
+
+        public List<string> GetVsePoskodbe()
+        {
+            var poskodbeUnikatneVrednostiList = new List<string>();
+
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            {
+                connection.Open();
+                string query = "SELECT DISTINCT poskodbe FROM vaja";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            poskodbeUnikatneVrednostiList.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+
+            return poskodbeUnikatneVrednostiList;
+        }
+
+
+
         internal ObservableCollection<Vaja> GetExercises()
         {
             ObservableCollection<Vaja> vaje = new ObservableCollection<Vaja>();

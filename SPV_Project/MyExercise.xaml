@@ -23,37 +23,37 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" />
+                    <Picker TextColor="Black" Title="Športna oprema" x:Name="SportnaOprema"/>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" />
+                    <Picker TextColor="Black" Title="Tip vadbe" x:Name="TipVadbe"/>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" />
+                    <Picker TextColor="Black" Title="Obremenjen del telesa" x:Name="ObremenjeneMisice" />
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" />
+                    <Picker TextColor="Black" Title="Težavnost vadbe" x:Name="TezavnostVadbe"/>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry />
+                    <Entry Text="Število ponovitev"/>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" />
+                    <Picker TextColor="Black" Title="Poškodbe" x:Name="Poskodbe"/>
                 </Border>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
                     <Border Stroke="black" StrokeThickness="1" Margin="5">
