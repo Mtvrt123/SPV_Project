@@ -17,18 +17,9 @@ public partial class Login : ContentPage
         this.Navigation.PushAsync(new Forgot());
     }
 
-    private void Button_Clicked_2(object sender, EventArgs e)
+    private void Button_Login(object sender, EventArgs e)
     {
-        Database a = new Database();
-        if (a.Login1(User.Text.ToString(),Pass.Text.ToString()) == true)
-        {
+        AppShell.Instance.setTabs(App.Database.Login(Username.Text, Password.Text));
 
-            
-            
-
-            this.Navigation.PushAsync(new Profile());
-            
-
-        }
     }
 }

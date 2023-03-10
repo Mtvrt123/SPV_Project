@@ -22,14 +22,14 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry x:Name="User" Keyboard="Text"  Margin="20,10" TextColor="Black"/>
+                    <Entry Keyboard="Text"  Margin="20,10" TextColor="Black" x:Name="Username"/>
                 </Border>
                 <Label Text="Geslo:"  Margin="20,10" TextColor="Black"/>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry x:Name="Pass" IsPassword="True" Margin="20,10" TextColor="Black"/>
+                    <Entry IsPassword="True" Margin="20,10" TextColor="Black" x:Name="Password"/>
                 </Border>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
                     <Label Text="Pozabli geslo?" TextColor="Black" VerticalOptions="Center"/>
@@ -44,7 +44,7 @@
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10"/>
                         </Border.StrokeShape>
-                        <Button Text="Prijava" BackgroundColor="#D5F889" TextColor="Black" Clicked="Button_Clicked_2" WidthRequest="150"/>
+                        <Button Text="Prijava" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150" Clicked="Button_Login"/>
                     </Border>
                 </StackLayout>
             </StackLayout>

@@ -11,18 +11,11 @@ public partial class Profile : ContentPage
 
     public static Profile Instance { get; private set; }
 
- //   public Profile(ProfileViewModel vm)
-	//{
-	//	InitializeComponent();
-	//	BindingContext = vm;
-	//	profileViewModel = vm;
-
- //       Instance = this;
- //   }
-    public Profile()
-    {
-        InitializeComponent();
-       
+    public Profile(ProfileViewModel vm)
+	{
+		InitializeComponent();
+		BindingContext = vm;
+		profileViewModel = vm;
 
         Instance = this;
     }
