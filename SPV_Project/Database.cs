@@ -360,7 +360,6 @@ namespace SPV_Project
 
             if (uporabnik != null)
             {
-                this.uporabnik = uporabnik;
                 return true;
             }
             else
