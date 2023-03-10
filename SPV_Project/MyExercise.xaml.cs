@@ -27,7 +27,9 @@ public partial class MyExercise : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        this.Navigation.PushAsync(new MyExerciseInfo());
+
+       
+        this.Navigation.PushAsync(new MyExerciseInfo(SportnaOprema.SelectedItem.ToString(), TipVadbe.SelectedItem.ToString(), ObremenjeneMisice.SelectedItem.ToString(), TezavnostVadbe.SelectedItem.ToString(), int.Parse(st_ponovitev.Text), Poskodbe.SelectedItem.ToString()));
 
     }
 }

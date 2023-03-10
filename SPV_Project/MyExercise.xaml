@@ -47,7 +47,7 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry Text="Število ponovitev"/>
+                    <Entry x:Name="st_ponovitev" Text=""/>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
