@@ -13,9 +13,6 @@
             </Border.Background>
         </Border>
         <StackLayout x:Name="OpravljeneVaje">
-            <Label Text="Vaje" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
-
-          
 
         </StackLayout>
         <ScrollView>

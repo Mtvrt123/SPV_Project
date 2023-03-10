@@ -23,37 +23,40 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" Title="Športna oprema" x:Name="SportnaOprema"/>
+                    <Picker TextColor="Black" Title="Športna oprema" x:Name="SportnaOprema" Margin="20, 20, 0, 0"/>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" Title="Tip vadbe" x:Name="TipVadbe"/>
+                    <Picker TextColor="Black" Title="Tip vadbe" x:Name="TipVadbe" Margin="15, 15, 15, 0"/>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" Title="Obremenjen del telesa" x:Name="ObremenjeneMisice" />
+                    <Picker TextColor="Black" Title="Obremenjen del telesa" x:Name="ObremenjeneMisice" Margin="15, 15, 15, 0"/>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" Title="Težavnost vadbe" x:Name="TezavnostVadbe"/>
+                    <Picker TextColor="Black" Title="Težavnost vadbe" x:Name="TezavnostVadbe" Margin="15, 15, 15, 0"/>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry x:Name="st_ponovitev" Text=""/>
+                    <StackLayout>
+                        <Label Text="Število ponovitev" Margin="15, 15, 15, 0"></Label>
+                        <Entry x:Name="st_ponovitev" Text="" WidthRequest="130" Margin="-40, 0, 0, 0"/>
+                    </StackLayout>
                 </Border>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Picker TextColor="Black" Title="Poškodbe" x:Name="Poskodbe"/>
+                    <Picker TextColor="Black" Title="Poškodbe" x:Name="Poskodbe" Margin="15, 15, 15, 0"/>
                 </Border>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
                     <Border Stroke="black" StrokeThickness="1" Margin="5">
