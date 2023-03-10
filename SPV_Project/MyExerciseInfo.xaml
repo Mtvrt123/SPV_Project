@@ -14,45 +14,47 @@
             </Border.Background>
         </Border>
 
-        <StackLayout>
+        <StackLayout x:Name="Vajnik">
             <Label Text="Vaje" FontSize="Large" HorizontalOptions="Center" TextColor="Black"/>
 
-            <StackLayout  Orientation="Horizontal" Spacing="200">
+           <!--<StackLayout  Orientation="Horizontal" Spacing="200">
                 <Label Text="01.01.2023" HorizontalOptions="StartAndExpand" Margin="5,0,0,0"/>
                 <Label Text="00:00:00" HorizontalOptions="EndAndExpand" Margin="0,0,5,0"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
                 <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja1" FontSize="Large" TextColor="White" />
+                    <Label x:Name="Vaja1" Text="Vaja1" FontSize="Large" TextColor="White" />
                 </Frame>
                 <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja2" FontSize="Large" TextColor="White" />
+                    <Label x:Name="Vaja2" Text="Vaja2" FontSize="Large" TextColor="White" />
                 </Frame>
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
                 <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja3" FontSize="Large" TextColor="White" />
+                    <Label x:Name="Vaja3" Text="Vaja3" FontSize="Large" TextColor="White" />
                 </Frame>
                 <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja4" FontSize="Large" TextColor="White" />
+                    <Label x:Name="Vaja4" Text="Vaja4" FontSize="Large" TextColor="White" />
                 </Frame>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
-                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja5" FontSize="Large" TextColor="White" />
-                </Frame>
-                <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
-                    <Label Text="Vaja6" FontSize="Large" TextColor="White" />
-                </Frame>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
-                <Border Stroke="black" StrokeThickness="1" Margin="5">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="10"/>
-                    </Border.StrokeShape>
-                    <Button Text="Končaj"  BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
-                </Border>
-            </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
+            <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
+                <Label x:Name="Vaja5" Text="Vaja5" FontSize="Large" TextColor="White" />
+            </Frame>
+            <Frame BackgroundColor="LightBlue" Padding="10" Margin="5">
+                <Label x:Name="Vaja6" Text="Vaja6" FontSize="Large" TextColor="White" />
+            </Frame>
+        </StackLayout>-->
+        
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,40,0,0">
+            <Border Stroke="black" StrokeThickness="1" Margin="5">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Button Text="Končaj" Clicked="Button_Clicked"  BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+            </Border>
         </StackLayout>
     </Grid>
 </ContentPage>

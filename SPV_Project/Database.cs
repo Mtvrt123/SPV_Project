@@ -369,6 +369,33 @@ namespace SPV_Project
             }
 
         }
+        public List<string> PolniVaje(string a,string b,string c,string d)
+        {
+            var poskodbeUnikatneVrednostiList = new List<string>();
+
+
+
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;user=root;database=mydb;port=3306;password="))
+            {
+                connection.Open();
+                string query = "SELECT DISTINCT naziv_vaje FROM vaja WHERE sportna_oprema="+"'"+a+"'"+" and obremenjene_misice="+"'"+b+"'"+" and tezavnost_vaje="+"'"+c+"'"+" and poskodbe="+"'"+d+"'";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            poskodbeUnikatneVrednostiList.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+
+            return poskodbeUnikatneVrednostiList;
+        }
+
+
+
 
     }
 }
