@@ -48,7 +48,20 @@ namespace SPV_Project
             conn.Close();
         }
 
+        public bool Registracija(string mail, string pass)
+        {
 
+            conn.Open();
+            MySqlCommand command = new MySqlCommand("INSERT INTO uporabnik (uporabnik_ID, email, geslo) VALUES (DEFAULT, @email,@geslo);", conn);
+     
+            command.Parameters.AddWithValue("@email", mail);
+            command.Parameters.AddWithValue("@geslo", Convert.ToHexString(SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(pass)))).ToString().ToLower();
+
+            int result = command.ExecuteNonQuery();
+
+            conn.Close();
+            return true;
+        }
 
 
         public Izdelek GetIzdelek()

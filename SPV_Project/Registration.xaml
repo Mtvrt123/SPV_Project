@@ -43,21 +43,21 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry Keyboard="Email" Margin="20,10" TextColor="Black"/>
+                    <Entry x:Name="Mail" Keyboard="Email" Margin="20,10" TextColor="Black"/>
                 </Border>
                 <Label Text="Geslo:"  Margin="20,15,0,10" TextColor="Black"/>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry IsPassword="True" Margin="20,10" TextColor="Black"/>
+                    <Entry x:Name="Pass1" IsPassword="True" Margin="20,10" TextColor="Black"/>
                 </Border>
                 <Label Text="Ponovi geslo:"  Margin="20,15,0,10" TextColor="Black"/>
                 <Border Stroke="black" StrokeThickness="1" Margin="5">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="10"/>
                     </Border.StrokeShape>
-                    <Entry IsPassword="True" Margin="20,10" TextColor="Black"/>
+                    <Entry x:Name="Pass2" IsPassword="True" Margin="20,10" TextColor="Black"/>
                 </Border>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
@@ -70,7 +70,7 @@
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="10"/>
                         </Border.StrokeShape>
-                        <Button Text="Registracija" HorizontalOptions="Center" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150"/>
+                        <Button Text="Registracija" HorizontalOptions="Center" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="150" Clicked="Button_Clicked_1"/>
                     </Border>
                 </StackLayout>
             </StackLayout>
