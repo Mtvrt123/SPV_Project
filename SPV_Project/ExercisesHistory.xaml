@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SPV_Project.ExercisesHistory"
              Title="ExercisesHistory">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#D5F889" Offset="0.1"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <ScrollView>
+            <Label Text="Zgodovina aktivnosti" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,10" TextColor="Black"/>
+            <!--INSERT ELEMENTS HERE-->
+        </ScrollView>
+    </Grid>
 </ContentPage>

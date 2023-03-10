@@ -20,88 +20,122 @@
                 <Label FontSize="Header" x:Name="imeZivila" Text="{Binding Izdelek.Ime}" TextColor="Black" HorizontalOptions="Center"/>
 
                 <StackLayout Orientation="Horizontal" Spacing="20" Margin="30,30,0,20" HorizontalOptions="Center">
-                    <Label Text="Maščobe:" TextColor="Black"/>
-                    <Label Text="Sladkor:" TextColor="Black"/>
-                    <Label Text="Energijska vrednost:" TextColor="Black"/>
-                    <Label Text="Beljakovine:" TextColor="Black"/>
+                    <StackLayout Margin="10">
+                        <Label Text="Maščobe:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="mascobe" Text="{Binding Izdelek.Mascobe}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="10">
+                        <Label Text="Sladkor:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="sladkor" Text="{Binding Izdelek.Sladkorji}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="10">
+                        <Label Text="Energijska vrednost:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="energijskaVrednost" Text="{Binding Izdelek.EnergijskaVrednost}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="10">
+                        <Label Text="Beljakovine:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="beljakovine" Text="{Binding Izdelek.Beljakovine}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" Spacing="55" Margin="30,0,0,20" HorizontalOptions="Center">
-                    <Label x:Name="mascobe" Text="{Binding Izdelek.Mascobe}" FontAttributes="Bold" TextColor="Black"/>
-                    <Label x:Name="sladkor" Text="{Binding Izdelek.Sladkorji}" FontAttributes="Bold" TextColor="Black"/>
-                    <Label x:Name="energijskaVrednost" Text="{Binding Izdelek.EnergijskaVrednost}" FontAttributes="Bold" TextColor="Black"/>
-                    <Label x:Name="beljakovine" Text="{Binding Izdelek.Beljakovine}" Margin="40,0,0,0" FontAttributes="Bold" TextColor="Black"/>
-                </StackLayout>
+
                 <BoxView HeightRequest="1" Color="Black" />
+                
                 <StackLayout Orientation="Horizontal" Spacing="20" Margin="30,10,0,20" HorizontalOptions="Center">
-                    <Label Text="Sol:" TextColor="Black"/>
-                    <Label Text="Ogljikovi hidrati:" TextColor="Black"/>
-                    <Label Text="Prehranske vlaknine:" TextColor="Black"/>
+                    <StackLayout Margin="10">
+                        <Label Text="Sol:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="sol" Text="{Binding Izdelek.Sol}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="10">
+                        <Label Text="Ogljikovi hidrati:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="ogljikoviHidrati" Text="{Binding Izdelek.OgljikoviHidrati}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="10">
+                        <Label Text="Prehranske vlaknine:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="prehranskeVlaknine" Text="{Binding Izdelek.PrehranskeVlaknine}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" Spacing="55" Margin="30,0,0,20" HorizontalOptions="Center">
-                    <Label x:Name="sol" Text="{Binding Izdelek.Sol}" FontAttributes="Bold" TextColor="Black"/>
-                    <Label x:Name="ogljikoviHidrati" Text="{Binding Izdelek.OgljikoviHidrati}" FontAttributes="Bold" TextColor="Black"/>
-                    <Label x:Name="prehranskeVlaknine" Text="{Binding Izdelek.PrehranskeVlaknine}" FontAttributes="Bold" TextColor="Black"/>
-                </StackLayout>
+
                 <BoxView HeightRequest="1" Color="Black" />
+                
                 <StackLayout Orientation="Horizontal" Spacing="20" Margin="30,10,0,20" HorizontalOptions="Center">
-                    <Label Text="Nasičene maščobe:" TextColor="Black"/>
-                    <Label Text="Nenasičene maščobe:" TextColor="Black"/>
-                    <Label Text="Povprečna hranilna vrednost:" TextColor="Black"/>
+                    <StackLayout Margin="10">
+                        <Label Text="Nasičene maščobe:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="nasiceneMascobe" Text="{Binding Izdelek.NasiceneMascobneKisline}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="10">
+                        <Label Text="Nenasičene maščobe:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="nenasiceneMascobe" Text="{Binding Izdelek.NenasiceneMascobneKisline}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="10">
+                        <Label Text="Povprečna hranilna vrednost:" TextColor="Black" HorizontalOptions="Center"/>
+                        <Label x:Name="povprecnaHranilnaVrednost" Text="{Binding Izdelek.PovprecnaHranilnaVrednost}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
+                    </StackLayout>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" Spacing="120" Margin="30,0,0,20" HorizontalOptions="Center">
-                    <Label x:Name="nasiceneMascobe" Text="{Binding Izdelek.NasiceneMascobneKisline}" FontAttributes="Bold" TextColor="Black"/>
-                    <Label x:Name="nenasiceneMascobe" Text="{Binding Izdelek.NenasiceneMascobneKisline}" FontAttributes="Bold" TextColor="Black"/>
-                    <Label x:Name="povprecnaHranilnaVrednost" Text="{Binding Izdelek.PovprecnaHranilnaVrednost}" FontAttributes="Bold" TextColor="Black"/>
-                </StackLayout>
+                
                 <BoxView HeightRequest="1" Color="Black" />
 
-
-                <StackLayout HorizontalOptions="Center" Margin="10,10,0,0" >
-                    <Label Text="Sestavine" TextColor="Black"/>
-                    <Border Stroke="black" StrokeThickness="1" Margin="5">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="10"/>
-                        </Border.StrokeShape>
-                        <Editor AutoSize="TextChanges" Text="{Binding Izdelek.Sestavine}" WidthRequest="300" TextColor="Black"/>
-                    </Border>
-
-                    <Label Text="Alergeni" TextColor="Black"/>
-                    <Border Stroke="black" StrokeThickness="1" Margin="5">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="10"/>
-                        </Border.StrokeShape>
-                        <Editor AutoSize="TextChanges" Text="{Binding Izdelek.Alergeni}" TextColor="Black"/>
-                    </Border>
-                    <Label Text="Neto količina živila" TextColor="Black"/>
-                    <Border Stroke="black" StrokeThickness="1" Margin="5">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="10"/>
-                        </Border.StrokeShape>
-                        <Editor AutoSize="TextChanges" Text="{Binding Izdelek.NetoKolicina}" TextColor="Black"/>
-                    </Border>
-
-                    <Label Text="Naziv proizvajalca" TextColor="Black"/>
-                    <Border Stroke="black" StrokeThickness="1" Margin="5">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="10"/>
-                        </Border.StrokeShape>
-                        <Editor AutoSize="TextChanges" Text="{Binding Izdelek.NazivProizvajalca}" TextColor="Black"/>
-                    </Border>
-
-                    <Label Text="Država porekla" TextColor="Black"/>
-                    <Border Stroke="black" StrokeThickness="1" Margin="5">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="10"/>
-                        </Border.StrokeShape>
-                        <Editor AutoSize="TextChanges" Text="{Binding Izdelek.DrzavaPorekla}" TextColor="Black"/>
-                    </Border>
-                    <Label Text="Datum uporabe" TextColor="Black"/>
-                    <Border Stroke="black" StrokeThickness="1" Margin="5">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="10"/>
-                        </Border.StrokeShape>
-                        <Editor AutoSize="TextChanges" Text="{Binding Izdelek.DatumUporabe}" TextColor="Black"/>
-                    </Border>
+                <StackLayout HorizontalOptions="Center" Margin="0,20,0,0" >
+                    <StackLayout Margin="0,0,0,10">
+                        <Label Text="Sestavine" TextColor="Black"/>
+                        <Border Stroke="black" StrokeThickness="1" Margin="1">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Editor AutoSize="TextChanges" Text="{Binding Izdelek.Sestavine}" WidthRequest="300" TextColor="Black"/>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Margin="0,0,0,10">
+                        <Label Text="Alergeni" TextColor="Black"/>
+                        <Border Stroke="black" StrokeThickness="1" Margin="5">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Editor AutoSize="TextChanges" Text="{Binding Izdelek.Alergeni}" TextColor="Black"/>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Margin="0,0,0,10">
+                        <Label Text="Neto količina živila" TextColor="Black"/>
+                        <Border Stroke="black" StrokeThickness="1" Margin="5">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Editor AutoSize="TextChanges" Text="{Binding Izdelek.NetoKolicina}" TextColor="Black"/>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Margin="0,0,0,10">
+                        <Label Text="Naziv proizvajalca" TextColor="Black"/>
+                        <Border Stroke="black" StrokeThickness="1" Margin="5">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Editor AutoSize="TextChanges" Text="{Binding Izdelek.NazivProizvajalca}" TextColor="Black"/>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Margin="0,0,0,10">
+                        <Label Text="Država porekla" TextColor="Black"/>
+                        <Border Stroke="black" StrokeThickness="1" Margin="5">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Editor AutoSize="TextChanges" Text="{Binding Izdelek.DrzavaPorekla}" TextColor="Black"/>
+                        </Border>
+                    </StackLayout>
+                    <StackLayout Margin="0,0,0,10">
+                        <Label Text="Datum uporabe" TextColor="Black"/>
+                        <Border Stroke="black" StrokeThickness="1" Margin="5">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Editor AutoSize="TextChanges" Text="{Binding Izdelek.DatumUporabe}" TextColor="Black"/>
+                        </Border>
+                    </StackLayout>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

@@ -4,7 +4,7 @@
              x:Class="SPV_Project.Scanner"
              Title="Scanner">
     <StackLayout>
-        <Button Text="Take Photo" Clicked="TakePhoto_Clicked" />
+        <Button Text="Take Photo" BackgroundColor="#D5F889" TextColor="Black" WidthRequest="250" Clicked="TakePhoto_Clicked" />
         <Image x:Name="PhotoImage" />
     </StackLayout>
 </ContentPage>

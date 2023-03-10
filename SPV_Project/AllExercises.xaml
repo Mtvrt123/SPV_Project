@@ -5,28 +5,36 @@
              Title="AllExercises">
 
     <Grid>
-        <ListView ItemsSource="{Binding Vaje}">
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#D5F889" Offset="0.1"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Label Text="Vse vaje" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,20" TextColor="Black"/>
+        <ListView ItemsSource="{Binding Vaje}" Margin="0,50,0,0" HorizontalOptions="Center" SelectionMode="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <Border Stroke="black" StrokeThickness="1" Margin="5" HorizontalOptions="Center">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
                         <Grid Padding="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Image Grid.RowSpan="2"
-                           Source="{Binding SlikaVaje}"
-                           Aspect="AspectFill"
-                           HeightRequest="100"
-                           WidthRequest="150" IsAnimationPlaying="True"/>
-                            <Label Grid.Column="1"
-                           Text="{Binding NazivVaje}"
-                           FontAttributes="Bold" />
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.RowSpan="2" Source="{Binding SlikaVaje}" Aspect="AspectFill" HeightRequest="100" WidthRequest="150" IsAnimationPlaying="True" Margin="10"/>
+                            <Label Grid.Column="1" Text="{Binding NazivVaje}" FontAttributes="Bold" Margin="10,0,10,0" TextColor="Black" WidthRequest="300"/>
                         </Grid>
+                        </Border>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
