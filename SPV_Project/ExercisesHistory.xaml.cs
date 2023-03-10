@@ -29,5 +29,6 @@ public partial class ExercisesHistory : ContentPage
         //    // Add the new frame to your layout
         //    OpravljeneVaje.Children.Add(newFrame);
         //}
+
     }
 }

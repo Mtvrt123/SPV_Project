@@ -50,6 +50,7 @@ public partial class MyExerciseInfo : ContentPage
 
 
 
+
         //insert into database(novo tabelo) da lahko uporabnik pregleda svoje pretekle opravljene vaje
 
 
